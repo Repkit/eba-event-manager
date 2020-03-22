@@ -1,0 +1,12 @@
+# For a real example remove echo lines and uncomment (remove #) from other lines
+unit-tests-runner:
+  before_script:
+    #- composer require zendframework/zend-log
+    #- composer install --no-progress
+    - echo "this is run before job"
+  script:
+    #- vendor/bin/phpunit -c ./data/phpunit-test/phpunit.xml
+    - echo "this is the real job"
+  after_script:
+    #- composer dump-autoload
+    - echo "this is run after job"

@@ -1,0 +1,6734 @@
+{
+	"info": {
+		"_postman_id": "6e3de3f2-2662-4a2b-a192-59806bc49e5b",
+		"name": "event-manager",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "event",
+			"item": [
+				{
+					"name": "create event",
+					"item": [
+						{
+							"name": "event",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "Name",
+											"value": "X Factor 2018",
+											"type": "text"
+										},
+										{
+											"key": "Identifier",
+											"value": "x-factor-2018",
+											"type": "text"
+										},
+										{
+											"key": "StartDate",
+											"value": "2018-11-21",
+											"type": "text"
+										},
+										{
+											"key": "EndDate",
+											"value": "2018-12-02",
+											"type": "text"
+										},
+										{
+											"key": "Status",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{domain}}/microice/events/public/index.php/event-manager/events",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"microice",
+										"events",
+										"public",
+										"index.php",
+										"event-manager",
+										"events"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "event-details",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "Status",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "X Factor este o competiție românească televizată care își propune să găsească noi talente muzicale vocale. Emisiunea face parte din franciza internațională The X Factor, al cărei format a fost creat în 2004 de Simon Cowell. Lorem Ipsum je demonstrativní výplňový text používaný v tiskařském a knihařském průmyslu. Lorem Ipsum je považováno za standard v této oblasti už od začátku 16. století, kdy dnes neznámý tiskař vzal kusy textu a na jejich základě vytvořil speciální vzorovou knihu. Jeho odkaz nevydržel pouze pět století, on přežil i nástup elektronické sazby v podstatě beze změny. Nejvíce popularizováno bylo Lorem Ipsum v šedesátých letech 20. století, kdy byly vydávány speciální vzorníky s jeho pasážemi a později pak díky počítačovým DTP programům jako Aldus PageMaker.",
+											"type": "text"
+										},
+										{
+											"key": "poster",
+											"value": "https://upload.wikimedia.org/wikipedia/en/a/a0/The_X_Factor_logo.png",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{domain}}/microice/events/public/index.php/event-manager/event-details/2/types/1",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"microice",
+										"events",
+										"public",
+										"index.php",
+										"event-manager",
+										"event-details",
+										"2",
+										"types",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "event-data",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "Name",
+											"value": "dilia",
+											"type": "text"
+										},
+										{
+											"key": "url",
+											"value": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHSycGrPYQ-ArCEj1qjg3LZ6XZRhQfbRrbJu4OSjUbAilfmcB1",
+											"type": "text"
+										},
+										{
+											"key": "Status",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{domain}}/microice/events/public/index.php/event-manager/event-data/1/events/2/data",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"microice",
+										"events",
+										"public",
+										"index.php",
+										"event-manager",
+										"event-data",
+										"1",
+										"events",
+										"2",
+										"data"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "events-types",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "TypeId",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "Status",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{domain}}/microice/events/public/index.php/event-manager/events-types/2/types",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"microice",
+										"events",
+										"public",
+										"index.php",
+										"event-manager",
+										"events-types",
+										"2",
+										"types"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "events-entities",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "EntityId",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "Status",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{domain}}/microice/events/public/index.php/event-manager/events-entities/2/entities",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"microice",
+										"events",
+										"public",
+										"index.php",
+										"event-manager",
+										"events-entities",
+										"2",
+										"entities"
+									]
+								},
+								"description": "link between an event and multiple entities"
+							},
+							"response": []
+						},
+						{
+							"name": "entity-types-data-types",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "EventDataTypeId",
+											"value": "2",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{domain}}/microice/events/public/index.php/event-manager/event-types-data-types/2/data-types",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"microice",
+										"events",
+										"public",
+										"index.php",
+										"event-manager",
+										"event-types-data-types",
+										"2",
+										"data-types"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "data preferences",
+					"item": [
+						{
+							"name": "list preferences",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/event-data-preferences/3/preferences",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"event-data-preferences",
+										"3",
+										"preferences"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get specific preference",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{domain}}/events/public/index.php/event-manager/event-data-preferences/3/preferences/1",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"events",
+										"public",
+										"index.php",
+										"event-manager",
+										"event-data-preferences",
+										"3",
+										"preferences",
+										"1"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "200 OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "http://192.168.0.15/~gabriela/trip-microservices/events/public/index.php/event-manager/event-data-preferences/3/preferences/1",
+											"protocol": "http",
+											"host": [
+												"192",
+												"168",
+												"0",
+												"15"
+											],
+											"path": [
+												"~gabriela",
+												"trip-microservices",
+												"events",
+												"public",
+												"index.php",
+												"event-manager",
+												"event-data-preferences",
+												"3",
+												"preferences",
+												"1"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Tue, 30 Oct 2018 14:17:08 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "Apache/2.4.7 (Ubuntu)"
+										},
+										{
+											"key": "Content-Length",
+											"value": "343"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/hal+json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"Id\": \"1\",\n    \"DataId\": \"3\",\n    \"Category\": \"test\",\n    \"Content\": \"{\\\"test\\\":\\\"testing\\\",\\\"example\\\":\\\"test\\\"}\",\n    \"Status\": \"1\",\n    \"Timestamp\": \"2018-10-30 16:14:32\",\n    \"_links\": {\n        \"self\": {\n            \"href\": \"http://192.168.0.15/~gabriela/trip-microservices/events/public/index.php/event-manager/event-data-preferences/3/preferences/1\"\n        }\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "create preference",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"Category\": \"testing\",\r\n    \"Content\": {\"key\":\"value\",\"example\":\"testTest\"},\r\n    \"ContentType\": \"serialize\"\r\n}"
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/event-data-preferences/3/preferences",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"event-data-preferences",
+										"3",
+										"preferences"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "201 Created",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"Category\": \"test\",\r\n    \"Content\": {\"test\": \"testing\", \"example\": \"test\"},\r\n    \"ContentType\": \"json\"\r\n}"
+										},
+										"url": {
+											"raw": "http://192.168.0.15/~gabriela/trip-microservices/events/public/index.php/event-manager/event-data-preferences/3/preferences",
+											"protocol": "http",
+											"host": [
+												"192",
+												"168",
+												"0",
+												"15"
+											],
+											"path": [
+												"~gabriela",
+												"trip-microservices",
+												"events",
+												"public",
+												"index.php",
+												"event-manager",
+												"event-data-preferences",
+												"3",
+												"preferences"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Tue, 30 Oct 2018 14:14:32 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "Apache/2.4.7 (Ubuntu)"
+										},
+										{
+											"key": "Location",
+											"value": "http://192.168.0.15/~gabriela/trip-microservices/events/public/index.php/event-manager/event-data-preferences/3/preferences"
+										},
+										{
+											"key": "Content-Location",
+											"value": "http://192.168.0.15/~gabriela/trip-microservices/events/public/index.php/event-manager/event-data-preferences/3/preferences"
+										},
+										{
+											"key": "Content-Length",
+											"value": "287"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/hal+json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"DataId\": \"3\",\n    \"Category\": \"test\",\n    \"Content\": {\n        \"test\": \"testing\",\n        \"example\": \"test\"\n    },\n    \"ContentType\": \"json\",\n    \"Status\": 1,\n    \"Timestamp\": \"2018-10-30 16:14:32\",\n    \"_links\": {\n        \"self\": {\n            \"href\": \"http://192.168.0.15/~gabriela/trip-microservices/events/public/index.php/event-manager/event-data-preferences/3/preferences\"\n        }\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "update preference",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"Id\": \"1\",\n    \"DataId\": \"3\",\n    \"Category\": \"test\",\n    \"Content\": {\"test\":\"example\",\"lorem ipsum\":\"dolor sit amet\"},\n    \"ContentType\": \"json\",\n    \"Status\": \"1\"\n}"
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/event-data-preferences/3/preferences/1",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"event-data-preferences",
+										"3",
+										"preferences",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "patch preference",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"Status\": 1\n}"
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/event-data-preferences/3/preferences/1",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"event-data-preferences",
+										"3",
+										"preferences",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete preference",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://192.168.0.15/~gabriela/trip-microservices/events/public/index.php/event-manager/event-data-preferences/3/preferences/1",
+									"protocol": "http",
+									"host": [
+										"192",
+										"168",
+										"0",
+										"15"
+									],
+									"path": [
+										"~gabriela",
+										"trip-microservices",
+										"events",
+										"public",
+										"index.php",
+										"event-manager",
+										"event-data-preferences",
+										"3",
+										"preferences",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "profile types",
+					"item": [
+						{
+							"name": "list profile types",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/event-profile-types",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"event-profile-types"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get specific profile type",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/event-profile-types/2/languages/en",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"event-profile-types",
+										"2",
+										"languages",
+										"en"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "200 OK - specific translation",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "http://192.168.0.15/~gabriela/trip-microservices/events/public/index.php/event-manager/event-profile-types/1/languages/en",
+											"protocol": "http",
+											"host": [
+												"192",
+												"168",
+												"0",
+												"15"
+											],
+											"path": [
+												"~gabriela",
+												"trip-microservices",
+												"events",
+												"public",
+												"index.php",
+												"event-manager",
+												"event-profile-types",
+												"1",
+												"languages",
+												"en"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Mon, 05 Nov 2018 15:44:02 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "Apache/2.4.7 (Ubuntu)"
+										},
+										{
+											"key": "Content-Length",
+											"value": "727"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/hal+json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"_links\": {\n        \"self\": {\n            \"href\": \"http://192.168.0.15/~gabriela/trip-microservices/events/public/index.php/event-manager/event-profile-types/1/languages/en?page=1\"\n        },\n        \"first\": {\n            \"href\": \"http://192.168.0.15/~gabriela/trip-microservices/events/public/index.php/event-manager/event-profile-types/1/languages/en\"\n        },\n        \"last\": {\n            \"href\": \"http://192.168.0.15/~gabriela/trip-microservices/events/public/index.php/event-manager/event-profile-types/1/languages/en?page=1\"\n        }\n    },\n    \"_embedded\": {\n        \"items\": [\n            {\n                \"Id\": \"1\",\n                \"Name\": \"profile type translation\",\n                \"CreationDate\": \"2018-11-05 15:54:49\",\n                \"Status\": \"1\",\n                \"Timestamp\": \"2018-11-05 15:54:49\",\n                \"TranslationId\": \"2\",\n                \"Language\": \"en\"\n            }\n        ]\n    },\n    \"page_count\": 1,\n    \"page_size\": 30,\n    \"total_items\": 1,\n    \"page\": 1\n}"
+								},
+								{
+									"name": "200 OK - all languages",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "http://192.168.0.15/~gabriela/trip-microservices/events/public/index.php/event-manager/event-profile-types/1/languages/*",
+											"protocol": "http",
+											"host": [
+												"192",
+												"168",
+												"0",
+												"15"
+											],
+											"path": [
+												"~gabriela",
+												"trip-microservices",
+												"events",
+												"public",
+												"index.php",
+												"event-manager",
+												"event-profile-types",
+												"1",
+												"languages",
+												"*"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Mon, 05 Nov 2018 15:00:53 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "Apache/2.4.7 (Ubuntu)"
+										},
+										{
+											"key": "Content-Length",
+											"value": "889"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/hal+json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"_links\": {\n        \"self\": {\n            \"href\": \"http://192.168.0.15/~gabriela/trip-microservices/events/public/index.php/event-manager/event-profile-types/1/languages/%2A?page=1\"\n        },\n        \"first\": {\n            \"href\": \"http://192.168.0.15/~gabriela/trip-microservices/events/public/index.php/event-manager/event-profile-types/1/languages/*\"\n        },\n        \"last\": {\n            \"href\": \"http://192.168.0.15/~gabriela/trip-microservices/events/public/index.php/event-manager/event-profile-types/1/languages/%2A?page=1\"\n        }\n    },\n    \"_embedded\": {\n        \"items\": [\n            {\n                \"Id\": \"1\",\n                \"Name\": \"default profile type\",\n                \"CreationDate\": \"2018-11-05 15:54:49\",\n                \"Status\": \"1\",\n                \"Timestamp\": \"2018-11-05 15:54:49\",\n                \"TranslationId\": \"1\",\n                \"Language\": null\n            },\n            {\n                \"Id\": \"1\",\n                \"Name\": \"profile type translation\",\n                \"CreationDate\": \"2018-11-05 15:54:49\",\n                \"Status\": \"1\",\n                \"Timestamp\": \"2018-11-05 15:54:49\",\n                \"TranslationId\": \"2\",\n                \"Language\": \"en\"\n            }\n        ]\n    },\n    \"page_count\": 1,\n    \"page_size\": 30,\n    \"total_items\": 2,\n    \"page\": 1\n}"
+								},
+								{
+									"name": "200 OK - all types",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "http://192.168.0.15/~gabriela/trip-microservices/events/public/index.php/event-manager/event-profile-types/*/languages/en",
+											"protocol": "http",
+											"host": [
+												"192",
+												"168",
+												"0",
+												"15"
+											],
+											"path": [
+												"~gabriela",
+												"trip-microservices",
+												"events",
+												"public",
+												"index.php",
+												"event-manager",
+												"event-profile-types",
+												"*",
+												"languages",
+												"en"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Mon, 05 Nov 2018 15:54:13 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "Apache/2.4.7 (Ubuntu)"
+										},
+										{
+											"key": "Content-Length",
+											"value": "891"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/hal+json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"_links\": {\n        \"self\": {\n            \"href\": \"http://192.168.0.15/~gabriela/trip-microservices/events/public/index.php/event-manager/event-profile-types/%2A/languages/en?page=1\"\n        },\n        \"first\": {\n            \"href\": \"http://192.168.0.15/~gabriela/trip-microservices/events/public/index.php/event-manager/event-profile-types/*/languages/en\"\n        },\n        \"last\": {\n            \"href\": \"http://192.168.0.15/~gabriela/trip-microservices/events/public/index.php/event-manager/event-profile-types/%2A/languages/en?page=1\"\n        }\n    },\n    \"_embedded\": {\n        \"items\": [\n            {\n                \"Id\": \"1\",\n                \"Name\": \"profile type translation\",\n                \"CreationDate\": \"2018-11-05 15:54:49\",\n                \"Status\": \"1\",\n                \"Timestamp\": \"2018-11-05 15:54:49\",\n                \"TranslationId\": \"2\",\n                \"Language\": \"en\"\n            },\n            {\n                \"Id\": \"2\",\n                \"Name\": \"profile type for en\",\n                \"CreationDate\": \"2018-11-05 17:47:04\",\n                \"Status\": \"1\",\n                \"Timestamp\": \"2018-11-05 17:47:04\",\n                \"TranslationId\": \"4\",\n                \"Language\": \"en\"\n            }\n        ]\n    },\n    \"page_count\": 1,\n    \"page_size\": 30,\n    \"total_items\": 2,\n    \"page\": 1\n}"
+								}
+							]
+						},
+						{
+							"name": "create new profile type",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "Name",
+											"value": "lorem ipsum",
+											"type": "text"
+										},
+										{
+											"key": "Status",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/event-profile-types",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"event-profile-types"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "201 Created",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"value": "application/x-www-form-urlencoded",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "Name",
+													"value": "default profile type",
+													"type": "text"
+												},
+												{
+													"key": "Status",
+													"value": "1",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{domain}}/public/index.php/event-manager/event-profile-types",
+											"host": [
+												"{{domain}}"
+											],
+											"path": [
+												"public",
+												"index.php",
+												"event-manager",
+												"event-profile-types"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Mon, 05 Nov 2018 13:55:57 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "Apache/2.4.7 (Ubuntu)"
+										},
+										{
+											"key": "Content-Length",
+											"value": "164"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/problem+json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"Id\": \"1\",\n    \"Name\": \"default profile type\",\n    \"CreationDate\": \"2018-11-05 15:54:49\",\n    \"Status\": \"1\",\n    \"_links\": {\n        \"self\": {\n            \"href\": \"http://192.168.0.15/~gabriela/trip-microservices/events/public/index.php/event-manager/event-profile-types/1\"\n        }\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "add new translation",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "Name",
+											"value": "some text here",
+											"type": "text"
+										},
+										{
+											"key": "Status",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/event-profile-types/6/languages/en",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"event-profile-types",
+										"6",
+										"languages",
+										"en"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "201 Created",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"value": "application/x-www-form-urlencoded",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "Name",
+													"value": "some text here",
+													"type": "text"
+												},
+												{
+													"key": "Status",
+													"value": "1",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{domain}}/public/index.php/event-manager/event-profile-types/6/languages/en",
+											"host": [
+												"{{domain}}"
+											],
+											"path": [
+												"public",
+												"index.php",
+												"event-manager",
+												"event-profile-types",
+												"6",
+												"languages",
+												"en"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Mon, 05 Nov 2018 14:12:37 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "Apache/2.4.7 (Ubuntu)"
+										},
+										{
+											"key": "Location",
+											"value": "http://192.168.0.15/~gabriela/trip-microservices/events/public/index.php/event-manager/event-profile-types/1/languages/en"
+										},
+										{
+											"key": "Content-Location",
+											"value": "http://192.168.0.15/~gabriela/trip-microservices/events/public/index.php/event-manager/event-profile-types/1/languages/en"
+										},
+										{
+											"key": "Content-Length",
+											"value": "253"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/hal+json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"Id\": \"6\",\n    \"CreationDate\": \"2018-12-05 10:02:20\",\n    \"Status\": \"1\",\n    \"Timestamp\": \"2018-12-05 10:02:20\",\n    \"TranslationId\": \"12\",\n    \"Language\": \"en\",\n    \"Name\": \"some text here\",\n    \"_links\": {\n        \"self\": {\n            \"href\": \"http://192.168.0.15/~gabriela/trip-microservices/events//public/index.php/event-manager/event-profile-types/6/languages/en\"\n        }\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "update profile type",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "Status",
+											"value": "0",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/event-profile-types/2",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"event-profile-types",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "patch profile type",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "Status",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/event-profile-types/2",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"event-profile-types",
+										"2"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "profile type translations",
+					"item": [
+						{
+							"name": "list translations",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/event-profile-type-translations",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"event-profile-type-translations"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get specific translation",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/event-profile-type-translations/2",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"event-profile-type-translations",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update translation",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "Id",
+											"value": "12",
+											"type": "text"
+										},
+										{
+											"key": "TypeId",
+											"value": "6",
+											"type": "text"
+										},
+										{
+											"key": "Name",
+											"value": "english name updated",
+											"type": "text"
+										},
+										{
+											"key": "Language",
+											"value": "en",
+											"type": "text"
+										},
+										{
+											"key": "CreationDate",
+											"value": "2018-12-05 10:04:21",
+											"type": "text"
+										},
+										{
+											"key": "Status",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/event-profile-type-translations/12",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"event-profile-type-translations",
+										"12"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "200 OK",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"value": "application/x-www-form-urlencoded",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "Id",
+													"value": "2",
+													"type": "text"
+												},
+												{
+													"key": "TypeId",
+													"value": "1",
+													"type": "text"
+												},
+												{
+													"key": "Name",
+													"value": "profile type translation",
+													"type": "text"
+												},
+												{
+													"key": "Language",
+													"value": "en",
+													"type": "text"
+												},
+												{
+													"key": "CreationDate",
+													"value": "2018-11-05 16:12:37",
+													"type": "text"
+												},
+												{
+													"key": "Status",
+													"value": "0",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{domain}}/public/index.php/event-manager/event-profile-type-translations/2",
+											"host": [
+												"{{domain}}"
+											],
+											"path": [
+												"public",
+												"index.php",
+												"event-manager",
+												"event-profile-type-translations",
+												"2"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Mon, 05 Nov 2018 14:23:06 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "Apache/2.4.7 (Ubuntu)"
+										},
+										{
+											"key": "Content-Length",
+											"value": "283"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/hal+json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"Id\": \"2\",\n    \"TypeId\": \"1\",\n    \"Name\": \"profile type translation\",\n    \"Language\": \"en\",\n    \"CreationDate\": \"2018-11-05 16:12:37\",\n    \"Status\": \"0\",\n    \"_links\": {\n        \"self\": {\n            \"href\": \"http://192.168.0.15/~gabriela/trip-microservices/events/public/index.php/event-manager/event-profile-type-translations/2\"\n        }\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "patch translation",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "Status",
+											"value": "0",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/event-profile-type-translations/12",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"event-profile-type-translations",
+										"12"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "200 OK",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"value": "application/x-www-form-urlencoded",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "Status",
+													"value": "1",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{domain}}/public/index.php/event-manager/event-profile-type-translations/2",
+											"host": [
+												"{{domain}}"
+											],
+											"path": [
+												"public",
+												"index.php",
+												"event-manager",
+												"event-profile-type-translations",
+												"2"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Mon, 05 Nov 2018 14:19:57 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "Apache/2.4.7 (Ubuntu)"
+										},
+										{
+											"key": "Content-Length",
+											"value": "278"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/hal+json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"Id\": \"2\",\n    \"TypeId\": \"1\",\n    \"Name\": \"profile type for en\",\n    \"Language\": \"en\",\n    \"CreationDate\": \"2018-11-05 16:12:37\",\n    \"Status\": \"1\",\n    \"_links\": {\n        \"self\": {\n            \"href\": \"http://192.168.0.15/~gabriela/trip-microservices/events/public/index.php/event-manager/event-profile-type-translations/2\"\n        }\n    }\n}"
+								}
+							]
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "profile detail fields",
+					"item": [
+						{
+							"name": "list field config",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/event-profile-detail-fields/2/fields",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"event-profile-detail-fields",
+										"2",
+										"fields"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get specific field config",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/event-profile-detail-fields/4/fields/2",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"event-profile-detail-fields",
+										"4",
+										"fields",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "add new field config",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "Field",
+											"value": "testing",
+											"type": "text"
+										},
+										{
+											"key": "Name",
+											"value": "lorem ipsum",
+											"type": "text"
+										},
+										{
+											"key": "Value",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "Required",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "Type",
+											"value": "text",
+											"type": "text"
+										},
+										{
+											"key": "Multiple",
+											"value": "0",
+											"type": "text"
+										},
+										{
+											"key": "Pattern",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "Category",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "Stash",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "Status",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/event-profile-detail-fields/3/fields",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"event-profile-detail-fields",
+										"3",
+										"fields"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "201 Created",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"value": "application/x-www-form-urlencoded",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "Field",
+													"value": "city",
+													"type": "text"
+												},
+												{
+													"key": "Name",
+													"value": "City",
+													"type": "text"
+												},
+												{
+													"key": "Value",
+													"value": "",
+													"type": "text"
+												},
+												{
+													"key": "Required",
+													"value": "0",
+													"type": "text"
+												},
+												{
+													"key": "Type",
+													"value": "autocomplete",
+													"type": "text"
+												},
+												{
+													"key": "Multiple",
+													"value": "0",
+													"type": "text"
+												},
+												{
+													"key": "Pattern",
+													"value": "",
+													"type": "text"
+												},
+												{
+													"key": "Category",
+													"value": "",
+													"type": "text"
+												},
+												{
+													"key": "Stash",
+													"value": "",
+													"type": "text"
+												},
+												{
+													"key": "Status",
+													"value": "1",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{domain}}/public/index.php/event-manager/event-profile-detail-fields/4/fields",
+											"host": [
+												"{{domain}}"
+											],
+											"path": [
+												"public",
+												"index.php",
+												"event-manager",
+												"event-profile-detail-fields",
+												"4",
+												"fields"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Mon, 12 Nov 2018 15:40:48 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "Apache/2.4.7 (Ubuntu)"
+										},
+										{
+											"key": "Location",
+											"value": "http://192.168.0.15/~gabriela/trip-microservices/events/public/index.php/event-manager/event-profile-field-config/4/fields/2"
+										},
+										{
+											"key": "Content-Location",
+											"value": "http://192.168.0.15/~gabriela/trip-microservices/events/public/index.php/event-manager/event-profile-field-config/4/fields/2"
+										},
+										{
+											"key": "Content-Length",
+											"value": "373"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/hal+json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"Id\": \"2\",\n    \"Field\": \"city\",\n    \"Name\": \"City\",\n    \"Value\": \"\",\n    \"Required\": false,\n    \"Type\": \"autocomplete\",\n    \"Multiple\": false,\n    \"Pattern\": \"\",\n    \"Category\": \"\",\n    \"Stash\": \"\",\n    \"TypeId\": \"4\",\n    \"CreationDate\": \"2018-11-12 17:40:48\",\n    \"Status\": \"1\",\n    \"_links\": {\n        \"self\": {\n            \"href\": \"http://192.168.0.15/~gabriela/trip-microservices/events/public/index.php/event-manager/event-profile-detail-fields/4/fields/2\"\n        }\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "update field config",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "Name",
+											"value": "lorem ipsum dolor sit amen",
+											"type": "text"
+										},
+										{
+											"key": "Status",
+											"value": "0",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/event-profile-detail-fields/3/fields/8",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"event-profile-detail-fields",
+										"3",
+										"fields",
+										"8"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "patch field config",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "Status",
+											"value": "0",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/event-profile-detail-fields/3/fields/6",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"event-profile-detail-fields",
+										"3",
+										"fields",
+										"6"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "event profiles",
+					"item": [
+						{
+							"name": "list profiles",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/event-profiles",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"event-profiles"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get specific profile",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/event-profiles/1/languages/en",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"event-profiles",
+										"1",
+										"languages",
+										"en"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create new profile",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "Name",
+											"value": "new profile",
+											"type": "text"
+										},
+										{
+											"key": "Status",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/event-profiles",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"event-profiles"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "add new translation",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "Name",
+											"value": "new english profile",
+											"type": "text"
+										},
+										{
+											"key": "Status",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/event-profiles/3/languages/en",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"event-profiles",
+										"3",
+										"languages",
+										"en"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update profile",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "Status",
+											"value": "0",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/event-profiles/3",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"event-profiles",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "patch profile",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "Name",
+											"value": "new altered english profile",
+											"type": "text"
+										},
+										{
+											"key": "Status",
+											"value": "0",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/event-profiles/3/languages/en",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"event-profiles",
+										"3",
+										"languages",
+										"en"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "profile translations",
+					"item": [
+						{
+							"name": "list translations",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/event-profile-translations",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"event-profile-translations"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "profile details",
+					"item": [
+						{
+							"name": "list fields",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/event-profile-details/5/types",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"event-profile-details",
+										"5",
+										"types"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "list specific fields",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/event-profile-details/5/types/2",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"event-profile-details",
+										"5",
+										"types",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "add new fields",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "test",
+											"value": "some text ",
+											"type": "text"
+										},
+										{
+											"key": "testing",
+											"value": "lorem ipsum dolor sit amet",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/event-profile-details/3/types/6",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"event-profile-details",
+										"3",
+										"types",
+										"6"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "patch fields",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "test",
+											"value": "some extra text",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/event-profile-details/3/types/6",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"event-profile-details",
+										"3",
+										"types",
+										"6"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "events profiles",
+					"item": [
+						{
+							"name": "list events profiles",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/events-profiles/321/profiles",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"events-profiles",
+										"321",
+										"profiles"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "list specific events profiles",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/events-profiles/321/profiles/2",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"events-profiles",
+										"321",
+										"profiles",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "add new events profiles",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "ProfileId",
+											"value": "3",
+											"type": "text"
+										},
+										{
+											"key": "Status",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/events-profiles/1/profiles",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"events-profiles",
+										"1",
+										"profiles"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "profiles types",
+					"item": [
+						{
+							"name": "list profiles types",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/event-profiles-types/2/types",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"event-profiles-types",
+										"2",
+										"types"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "list specific event profiles types",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/event-profiles-types/2/types/5",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"event-profiles-types",
+										"2",
+										"types",
+										"5"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "add new event profiles types",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "TypeId",
+											"value": "6",
+											"type": "text"
+										},
+										{
+											"key": "Status",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/event-profiles-types/3/types",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"event-profiles-types",
+										"3",
+										"types"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "profile preferences",
+					"item": [
+						{
+							"name": "list preferences",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/event-profile-preferences/2/preferences",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"event-profile-preferences",
+										"2",
+										"preferences"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get specific preference",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/event-profile-preferences/2/preferences/1",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"event-profile-preferences",
+										"2",
+										"preferences",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create preference",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"Category\": \"testing\",\r\n    \"Content\": {\"key\":\"value\",\"example\":\"testTest\"},\r\n    \"ContentType\": \"json\"\r\n}"
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/event-profile-preferences/1/preferences",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"event-profile-preferences",
+										"1",
+										"preferences"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update preference",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"Id\": 2,\r\n\t\"ProfileId\": 1,\r\n    \"Category\": \"test\",\r\n    \"Content\": {\"example\":\"test\",\"lorem\":\"ipsum\"},\r\n    \"ContentType\": \"json\",\r\n    \"CreationDate\": \"2018-11-19 11:31:17\",\r\n    \"Status\": 1\r\n}"
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/event-profile-preferences/1/preferences/2",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"event-profile-preferences",
+										"1",
+										"preferences",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "patch preference",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"Category\": \"test\"\n}"
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/event-profile-preferences/1/preferences/2",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"event-profile-preferences",
+										"1",
+										"preferences",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete preference",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/event-profile-preferences/2/preferences/3",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"event-profile-preferences",
+										"2",
+										"preferences",
+										"3"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "profile types data types",
+					"item": [
+						{
+							"name": "list profile types data types",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/event-profile-types-data-types/3/data-types",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"event-profile-types-data-types",
+										"3",
+										"data-types"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "list specific profile types data types",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/event-profile-types-data-types/3/data-types/2",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"event-profile-types-data-types",
+										"3",
+										"data-types",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "add new event profile types data types",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "EventProfileDataTypeId",
+											"value": "3",
+											"type": "text"
+										},
+										{
+											"key": "Status",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/event-profile-types-data-types/6/data-types",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"event-profile-types-data-types",
+										"6",
+										"data-types"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "profile data types",
+					"item": [
+						{
+							"name": "list profile data types",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/event-profile-data-types",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"event-profile-data-types"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "list specific profile data type",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/event-profile-data-types/1",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"event-profile-data-types",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create new profile data type",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "Name",
+											"value": "lorem ipsum",
+											"type": "text"
+										},
+										{
+											"key": "Status",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/event-profile-data-types",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"event-profile-data-types"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update profile data type",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "Name",
+											"value": "lorem ipsum dolor sit smet",
+											"type": "text"
+										},
+										{
+											"key": "Status",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/event-profile-data-types/4",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"event-profile-data-types",
+										"4"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "profile data field config",
+					"item": [
+						{
+							"name": "list fields config",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/event-profile-data-field-config/3/fields",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"event-profile-data-field-config",
+										"3",
+										"fields"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get specific field config",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/event-profile-data-field-config/3/fields/1",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"event-profile-data-field-config",
+										"3",
+										"fields",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "add new field config",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "Field",
+											"value": "name",
+											"type": "text"
+										},
+										{
+											"key": "Name",
+											"value": "lorem ipsum",
+											"type": "text"
+										},
+										{
+											"key": "Value",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "Required",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "Type",
+											"value": "text",
+											"type": "text"
+										},
+										{
+											"key": "Multiple",
+											"value": "0",
+											"type": "text"
+										},
+										{
+											"key": "Pattern",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "Category",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "Stash",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "Status",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/event-profile-data-field-config/4/fields",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"event-profile-data-field-config",
+										"4",
+										"fields"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update field config",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "Required",
+											"value": "0",
+											"type": "text"
+										},
+										{
+											"key": "Status",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/event-profile-data-field-config/4/fields/5",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"event-profile-data-field-config",
+										"4",
+										"fields",
+										"5"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "profile data",
+					"item": [
+						{
+							"name": "list profile data",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/event-profile-data/3/profiles/2/data",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"event-profile-data",
+										"3",
+										"profiles",
+										"2",
+										"data"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get specific profile data",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/event-profile-data/3/profiles/2/data/2",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"event-profile-data",
+										"3",
+										"profiles",
+										"2",
+										"data",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create new profile data",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "Name",
+											"value": "profile name",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "profile field name",
+											"type": "text"
+										},
+										{
+											"key": "gender",
+											"value": "male",
+											"type": "text"
+										},
+										{
+											"key": "Status",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/event-profile-data/4/profiles/3/data",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"event-profile-data",
+										"4",
+										"profiles",
+										"3",
+										"data"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update profile data",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "Name",
+											"value": "profile name updated",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "lorem ipsum",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/event-profile-data/4/profiles/3/data/10",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"event-profile-data",
+										"4",
+										"profiles",
+										"3",
+										"data",
+										"10"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "profile data fields",
+					"item": [
+						{
+							"name": "list fields",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/event-profile-data-fields/3/fileds",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"event-profile-data-fields",
+										"3",
+										"fileds"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get specific field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/event-profile-data-fields/4/fileds/5",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"event-profile-data-fields",
+										"4",
+										"fileds",
+										"5"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "add new fields",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "lorem ipsum dolor sit amet",
+											"type": "text"
+										},
+										{
+											"key": "gender",
+											"value": "neutral",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/event-profile-data-fields/10/fileds",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"event-profile-data-fields",
+										"10",
+										"fileds"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "profiles data",
+					"item": [
+						{
+							"name": "list profiles data",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/event-profiles-data/2/data",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"event-profiles-data",
+										"2",
+										"data"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get specific profile data",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/event-profiles-data/2/data/3",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"event-profiles-data",
+										"2",
+										"data",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update profiles data",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "Status",
+											"value": "0",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/event-profiles-data/2/data/4",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"event-profiles-data",
+										"2",
+										"data",
+										"4"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "profile data preferences",
+					"item": [
+						{
+							"name": "list preferences",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/event-profile-data-preferences/3/preferences",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"event-profile-data-preferences",
+										"3",
+										"preferences"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get specific preference",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/event-profile-data-preferences/3/preferences/1",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"event-profile-data-preferences",
+										"3",
+										"preferences",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create preference",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"Category\": \"test\",\r\n    \"Content\": \"lorem ipsum\",\r\n    \"ContentType\": \"text\"\r\n}"
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/event-profile-data-preferences/5/preferences",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"event-profile-data-preferences",
+										"5",
+										"preferences"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update preference",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"Id\": \"3\",\n    \"DataId\": \"5\",\n    \"Category\": \"test\",\n    \"Content\": \"lorem ipsum\",\n    \"ContentType\": \"text\",\n    \"CreationDate\": \"2018-11-23 17:11:26\",\n    \"Status\": 0\n}"
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/event-profile-data-preferences/5/preferences/3",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"event-profile-data-preferences",
+										"5",
+										"preferences",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "patch preference",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"Content\": \"lorem ipsum dolor sit amet\",\n    \"ContentType\": \"text\",\n    \"Status\": 1\n}"
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/event-profile-data-preferences/5/preferences/3",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"event-profile-data-preferences",
+										"5",
+										"preferences",
+										"3"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "events",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://192.168.0.15/~johnnyb/microice/events/public/index.php/event-manager/events/1",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"0",
+								"15"
+							],
+							"path": [
+								"~johnnyb",
+								"microice",
+								"events",
+								"public",
+								"index.php",
+								"event-manager",
+								"events",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "event-types",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{domain}}/microice/events/public/index.php/event-manager/event-types",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"microice",
+								"events",
+								"public",
+								"index.php",
+								"event-manager",
+								"event-types"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "event-types",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "Name",
+									"value": "Foobtball match",
+									"type": "text"
+								},
+								{
+									"key": "Status",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{domain}}/microice/events/public/index.php/event-manager/event-types",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"microice",
+								"events",
+								"public",
+								"index.php",
+								"event-manager",
+								"event-types"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "event-details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{domain}}/microice/events/public/index.php/event-manager/event-details/3/types",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"microice",
+								"events",
+								"public",
+								"index.php",
+								"event-manager",
+								"event-details",
+								"3",
+								"types"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "event-types-data-types",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://192.168.0.15/~johnnyb/microice/events/public/index.php/event-manager/event-types-data-types/1/data-types",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"0",
+								"15"
+							],
+							"path": [
+								"~johnnyb",
+								"microice",
+								"events",
+								"public",
+								"index.php",
+								"event-manager",
+								"event-types-data-types",
+								"1",
+								"data-types"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "event-data-field-config",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://192.168.0.15/~johnnyb/microice/events/public/index.php/event-manager/event-data-field-config/1",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"0",
+								"15"
+							],
+							"path": [
+								"~johnnyb",
+								"microice",
+								"events",
+								"public",
+								"index.php",
+								"event-manager",
+								"event-data-field-config",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "event-data-types",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://192.168.0.15/~johnnyb/microice/events/public/index.php/event-manager/event-data-types",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"0",
+								"15"
+							],
+							"path": [
+								"~johnnyb",
+								"microice",
+								"events",
+								"public",
+								"index.php",
+								"event-manager",
+								"event-data-types"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "event-details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://192.168.0.15/~johnnyb/microice/events/public/index.php/event-manager/event-details/2/types",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"0",
+								"15"
+							],
+							"path": [
+								"~johnnyb",
+								"microice",
+								"events",
+								"public",
+								"index.php",
+								"event-manager",
+								"event-details",
+								"2",
+								"types"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "event-detail-fields",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://192.168.0.15/~johnnyb/microice/events/public/index.php/event-manager/event-details/1/types/1",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"0",
+								"15"
+							],
+							"path": [
+								"~johnnyb",
+								"microice",
+								"events",
+								"public",
+								"index.php",
+								"event-manager",
+								"event-details",
+								"1",
+								"types",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "events-entities",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://192.168.0.15/~johnnyb/microice/events/public/index.php/event-manager/events-entities/1/entities",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"0",
+								"15"
+							],
+							"path": [
+								"~johnnyb",
+								"microice",
+								"events",
+								"public",
+								"index.php",
+								"event-manager",
+								"events-entities",
+								"1",
+								"entities"
+							]
+						},
+						"description": "link between an event and multiple entities"
+					},
+					"response": []
+				},
+				{
+					"name": "events-types",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{domain}}/microice/events/public/index.php/event-manager/events-types/2/types",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"microice",
+								"events",
+								"public",
+								"index.php",
+								"event-manager",
+								"events-types",
+								"2",
+								"types"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "entity",
+			"item": [
+				{
+					"name": "data preferences",
+					"item": [
+						{
+							"name": "create preference",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"Category\": \"testSerialized\",\r\n    \"Content\": {\"key\":\"value\",\"example\":\"testTest\"},\r\n    \"ContentType\": \"serialize\"\r\n}"
+								},
+								"url": {
+									"raw": "http://192.168.0.15/~gabriela/trip-microservices/events/public/index.php/event-manager/entity-data-preferences/2/preferences",
+									"protocol": "http",
+									"host": [
+										"192",
+										"168",
+										"0",
+										"15"
+									],
+									"path": [
+										"~gabriela",
+										"trip-microservices",
+										"events",
+										"public",
+										"index.php",
+										"event-manager",
+										"entity-data-preferences",
+										"2",
+										"preferences"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "201 Created",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"Category\": \"testSerialized\",\r\n    \"Content\": {\"key\":\"value\",\"example\":\"testTest\"},\r\n    \"ContentType\": \"serialize\"\r\n}"
+										},
+										"url": {
+											"raw": "http://192.168.0.15/~gabriela/trip-microservices/events/public/index.php/event-manager/entity-data-preferences/2/preferences",
+											"protocol": "http",
+											"host": [
+												"192",
+												"168",
+												"0",
+												"15"
+											],
+											"path": [
+												"~gabriela",
+												"trip-microservices",
+												"events",
+												"public",
+												"index.php",
+												"event-manager",
+												"entity-data-preferences",
+												"2",
+												"preferences"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Wed, 31 Oct 2018 08:00:58 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "Apache/2.4.7 (Ubuntu)"
+										},
+										{
+											"key": "Location",
+											"value": "http://192.168.0.15/~gabriela/trip-microservices/events/public/index.php/event-manager/entity-data-preferences/2/preferences"
+										},
+										{
+											"key": "Content-Location",
+											"value": "http://192.168.0.15/~gabriela/trip-microservices/events/public/index.php/event-manager/entity-data-preferences/2/preferences"
+										},
+										{
+											"key": "Content-Length",
+											"value": "328"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/hal+json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"DataId\": \"2\",\n    \"Category\": \"testSerialized\",\n    \"Content\": {\n        \"key\": \"value\",\n        \"example\": \"testTest\"\n    },\n    \"ContentType\": \"serialize\",\n    \"CreationDate\": \"2018-10-31 10:00:58\",\n    \"Status\": 1,\n    \"_links\": {\n        \"self\": {\n            \"href\": \"http://192.168.0.15/~gabriela/trip-microservices/events/public/index.php/event-manager/entity-data-preferences/2/preferences\"\n        }\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "list preferences",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://192.168.0.15/~gabriela/trip-microservices/events/public/index.php/event-manager/entity-data-preferences/3/preferences",
+									"protocol": "http",
+									"host": [
+										"192",
+										"168",
+										"0",
+										"15"
+									],
+									"path": [
+										"~gabriela",
+										"trip-microservices",
+										"events",
+										"public",
+										"index.php",
+										"event-manager",
+										"entity-data-preferences",
+										"3",
+										"preferences"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get specific preference",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://192.168.0.15/~gabriela/trip-microservices/events/public/index.php/event-manager/entity-data-preferences/3/preferences/2",
+									"protocol": "http",
+									"host": [
+										"192",
+										"168",
+										"0",
+										"15"
+									],
+									"path": [
+										"~gabriela",
+										"trip-microservices",
+										"events",
+										"public",
+										"index.php",
+										"event-manager",
+										"entity-data-preferences",
+										"3",
+										"preferences",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete preference",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://192.168.0.15/~gabriela/trip-microservices/events/public/index.php/event-manager/entity-data-preferences/3/preferences/2",
+									"protocol": "http",
+									"host": [
+										"192",
+										"168",
+										"0",
+										"15"
+									],
+									"path": [
+										"~gabriela",
+										"trip-microservices",
+										"events",
+										"public",
+										"index.php",
+										"event-manager",
+										"entity-data-preferences",
+										"3",
+										"preferences",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "patch preference",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"Status\": 1\n}"
+								},
+								"url": {
+									"raw": "http://192.168.0.15/~gabriela/trip-microservices/events/public/index.php/event-manager/entity-data-preferences/3/preferences/2",
+									"protocol": "http",
+									"host": [
+										"192",
+										"168",
+										"0",
+										"15"
+									],
+									"path": [
+										"~gabriela",
+										"trip-microservices",
+										"events",
+										"public",
+										"index.php",
+										"event-manager",
+										"entity-data-preferences",
+										"3",
+										"preferences",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update preference",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"Id\": \"2\",\n    \"DataId\": \"3\",\n    \"Category\": \"test\",\n    \"Content\": \"{\\\"test\\\":\\\"testing\\\",\\\"example\\\":\\\"test\\\"}\",\n    \"CreationDate\": \"2018-10-30 18:31:53\",\n    \"Status\": \"0\"\n}"
+								},
+								"url": {
+									"raw": "http://192.168.0.15/~gabriela/trip-microservices/events/public/index.php/event-manager/entity-data-preferences/3/preferences/2",
+									"protocol": "http",
+									"host": [
+										"192",
+										"168",
+										"0",
+										"15"
+									],
+									"path": [
+										"~gabriela",
+										"trip-microservices",
+										"events",
+										"public",
+										"index.php",
+										"event-manager",
+										"entity-data-preferences",
+										"3",
+										"preferences",
+										"2"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "profile types",
+					"item": [
+						{
+							"name": "list profile types",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/entity-profile-types",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"entity-profile-types"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get specific profile type",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/entity-profile-types/2/languages/en",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"entity-profile-types",
+										"2",
+										"languages",
+										"en"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create new profile type",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "Name",
+											"value": "lorem ipsum",
+											"type": "text"
+										},
+										{
+											"key": "Status",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/entity-profile-types",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"entity-profile-types"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "add new translation",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "Name",
+											"value": "english name",
+											"type": "text"
+										},
+										{
+											"key": "Status",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/entity-profile-types/5/languages/en",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"entity-profile-types",
+										"5",
+										"languages",
+										"en"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update profile type",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "Status",
+											"value": "0",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/entity-profile-types/5",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"entity-profile-types",
+										"5"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "profile type translations",
+					"item": [
+						{
+							"name": "list translations",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/entity-profile-type-translations",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"entity-profile-type-translations"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get specific translation",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/entity-profile-type-translations/3",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"entity-profile-type-translations",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update translation",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "Id",
+											"value": "10",
+											"type": "text"
+										},
+										{
+											"key": "TypeId",
+											"value": "5",
+											"type": "text"
+										},
+										{
+											"key": "Name",
+											"value": "english name updated",
+											"type": "text"
+										},
+										{
+											"key": "Language",
+											"value": "en",
+											"type": "text"
+										},
+										{
+											"key": "CreationDate",
+											"value": "2018-12-05 12:58:49",
+											"type": "text"
+										},
+										{
+											"key": "Status",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/entity-profile-type-translations/10",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"entity-profile-type-translations",
+										"10"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "patch translation",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "Status",
+											"value": "0",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/entity-profile-type-translations/3",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"entity-profile-type-translations",
+										"3"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "profile detail fields",
+					"item": [
+						{
+							"name": "list field config",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/entity-profile-detail-fields/2/fields",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"entity-profile-detail-fields",
+										"2",
+										"fields"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get specific field config",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/entity-profile-detail-fields/4/fields/2",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"entity-profile-detail-fields",
+										"4",
+										"fields",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "add new field config",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "Field",
+											"value": "gender",
+											"type": "text"
+										},
+										{
+											"key": "Name",
+											"value": "Gender",
+											"type": "text"
+										},
+										{
+											"key": "Value",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "Required",
+											"value": "0",
+											"type": "text"
+										},
+										{
+											"key": "Type",
+											"value": "text",
+											"type": "text"
+										},
+										{
+											"key": "Multiple",
+											"value": "0",
+											"type": "text"
+										},
+										{
+											"key": "Pattern",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "Category",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "Stash",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "Status",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/entity-profile-detail-fields/5/fields",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"entity-profile-detail-fields",
+										"5",
+										"fields"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update field config",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "Required",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "Status",
+											"value": "0",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/entity-profile-detail-fields/5/fields/9",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"entity-profile-detail-fields",
+										"5",
+										"fields",
+										"9"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "patch field config",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "Status",
+											"value": "0",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/entity-profile-detail-fields/3/fields/1",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"entity-profile-detail-fields",
+										"3",
+										"fields",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "entity profiles",
+					"item": [
+						{
+							"name": "list profiles",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/entity-profiles",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"entity-profiles"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get specific profile",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/entity-profiles/2/languages/en",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"entity-profiles",
+										"2",
+										"languages",
+										"en"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create new profile",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "Name",
+											"value": "lorem ipsum",
+											"type": "text"
+										},
+										{
+											"key": "Status",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/entity-profiles",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"entity-profiles"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "add new translation",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "Name",
+											"value": "english profile",
+											"type": "text"
+										},
+										{
+											"key": "Status",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/entity-profiles/3/languages/en",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"entity-profiles",
+										"3",
+										"languages",
+										"en"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update profile",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "Status",
+											"value": "0",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/entity-profiles/1",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"entity-profiles",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "patch profile",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "Name",
+											"value": "altered profile name",
+											"type": "text"
+										},
+										{
+											"key": "Status",
+											"value": "0",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/entity-profiles/1/languages/fr",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"entity-profiles",
+										"1",
+										"languages",
+										"fr"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "profile translations",
+					"item": [
+						{
+							"name": "list translations",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/entity-profile-translations",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"entity-profile-translations"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "profile details",
+					"item": [
+						{
+							"name": "list fields",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/entity-profile-details/5/types",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"entity-profile-details",
+										"5",
+										"types"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "list specific fields",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/entity-profile-details/5/types/2",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"entity-profile-details",
+										"5",
+										"types",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "add new fields",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "age",
+											"value": "27",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/entity-profile-details/7/types/5",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"entity-profile-details",
+										"7",
+										"types",
+										"5"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "patch fields",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "age",
+											"value": "28",
+											"type": "text"
+										},
+										{
+											"key": "gender",
+											"value": "female",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/entity-profile-details/7/types/5",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"entity-profile-details",
+										"7",
+										"types",
+										"5"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "entities profiles",
+					"item": [
+						{
+							"name": "list entities profiles",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/entities-profiles/321/profiles",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"entities-profiles",
+										"321",
+										"profiles"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "list specific entities profiles",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/entities-profiles/321/profiles/2",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"entities-profiles",
+										"321",
+										"profiles",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "add new entities profiles",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "ProfileId",
+											"value": "3",
+											"type": "text"
+										},
+										{
+											"key": "Status",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/entities-profiles/32/profiles",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"entities-profiles",
+										"32",
+										"profiles"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "profiles types",
+					"item": [
+						{
+							"name": "list profiles types",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/entity-profiles-types/2/types",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"entity-profiles-types",
+										"2",
+										"types"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "list specific entity profiles types",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/entity-profiles-types/2/types/3",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"entity-profiles-types",
+										"2",
+										"types",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "add new entity profiles types",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "TypeId",
+											"value": "5",
+											"type": "text"
+										},
+										{
+											"key": "Status",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/entity-profiles-types/3/types",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"entity-profiles-types",
+										"3",
+										"types"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "profile preferences",
+					"item": [
+						{
+							"name": "list preferences",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/entity-profile-preferences/2/preferences",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"entity-profile-preferences",
+										"2",
+										"preferences"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get specific preference",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/entity-profile-preferences/2/preferences/1",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"entity-profile-preferences",
+										"2",
+										"preferences",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create preference",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"Category\": \"testing\",\r\n    \"Content\": {\"key\":\"value\",\"example\":\"testTest\"},\r\n    \"ContentType\": \"json\"\r\n}"
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/entity-profile-preferences/2/preferences",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"entity-profile-preferences",
+										"2",
+										"preferences"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update preference",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"Id\": 2,\r\n\t\"ProfileId\": 1,\r\n    \"Category\": \"test\",\r\n    \"Content\": {\"example\":\"test\",\"lorem\":\"ipsum\"},\r\n    \"ContentType\": \"json\",\r\n    \"CreationDate\": \"2018-11-28 13:59:17\",\r\n    \"Status\": 1\r\n}"
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/entity-profile-preferences/1/preferences/2",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"entity-profile-preferences",
+										"1",
+										"preferences",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "patch preference",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"Content\": \"lorem ipsum\",\r\n    \"ContentType\": \"text\"\r\n}"
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/entity-profile-preferences/1/preferences/2",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"entity-profile-preferences",
+										"1",
+										"preferences",
+										"2"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "profile types data types",
+					"item": [
+						{
+							"name": "list profile types data types",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/entity-profile-types-data-types/3/data-types",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"entity-profile-types-data-types",
+										"3",
+										"data-types"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "list specific profile types data types",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/entity-profile-types-data-types/3/data-types/2",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"entity-profile-types-data-types",
+										"3",
+										"data-types",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "add new entity profile types data types",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "EntityProfileDataTypeId",
+											"value": "3",
+											"type": "text"
+										},
+										{
+											"key": "Status",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/entity-profile-types-data-types/5/data-types",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"entity-profile-types-data-types",
+										"5",
+										"data-types"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "profile data types",
+					"item": [
+						{
+							"name": "list profile data types",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/entity-profile-data-types",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"entity-profile-data-types"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "list specific profile data type",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/entity-profile-data-types/1",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"entity-profile-data-types",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create new profile data type",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "Name",
+											"value": "lorem ipsum",
+											"type": "text"
+										},
+										{
+											"key": "Status",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/entity-profile-data-types",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"entity-profile-data-types"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update profile data type",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "Name",
+											"value": "lorem ipsum dolor sit amet",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/entity-profile-data-types/3",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"entity-profile-data-types",
+										"3"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "profile data field config",
+					"item": [
+						{
+							"name": "list fields config",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/entity-profile-data-field-config/2/fields",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"entity-profile-data-field-config",
+										"2",
+										"fields"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get specific field config",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/entity-profile-data-field-config/2/fields/1",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"entity-profile-data-field-config",
+										"2",
+										"fields",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "add new field config",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "Field",
+											"value": "age",
+											"type": "text"
+										},
+										{
+											"key": "Name",
+											"value": "Age",
+											"type": "text"
+										},
+										{
+											"key": "Value",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "Required",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "Type",
+											"value": "text",
+											"type": "text"
+										},
+										{
+											"key": "Multiple",
+											"value": "0",
+											"type": "text"
+										},
+										{
+											"key": "Pattern",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "Category",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "Stash",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "Status",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/entity-profile-data-field-config/3/fields",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"entity-profile-data-field-config",
+										"3",
+										"fields"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update field config",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "Status",
+											"value": "0",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/entity-profile-data-field-config/3/fields/4",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"entity-profile-data-field-config",
+										"3",
+										"fields",
+										"4"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "profile data",
+					"item": [
+						{
+							"name": "list profile data",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/entity-profile-data/2/profiles/5/data",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"entity-profile-data",
+										"2",
+										"profiles",
+										"5",
+										"data"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get specific profile data",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/entity-profile-data/2/profiles/5/data/1",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"entity-profile-data",
+										"2",
+										"profiles",
+										"5",
+										"data",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create new profile data",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "Name",
+											"value": "lorem ipsum",
+											"type": "text"
+										},
+										{
+											"key": "age",
+											"value": "23",
+											"type": "text"
+										},
+										{
+											"key": "gender",
+											"value": "male",
+											"type": "text"
+										},
+										{
+											"key": "Status",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/entity-profile-data/3/profiles/7/data",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"entity-profile-data",
+										"3",
+										"profiles",
+										"7",
+										"data"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update profile data",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "Name",
+											"value": "lorem ipsum dolor sit amet",
+											"type": "text"
+										},
+										{
+											"key": "gender",
+											"value": "female",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/entity-profile-data/3/profiles/7/data/4",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"entity-profile-data",
+										"3",
+										"profiles",
+										"7",
+										"data",
+										"4"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "profile data fields",
+					"item": [
+						{
+							"name": "list fields",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/entity-profile-data-fields/3/fileds",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"entity-profile-data-fields",
+										"3",
+										"fileds"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get specific field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/entity-profile-data-fields/3/fileds/5",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"entity-profile-data-fields",
+										"3",
+										"fileds",
+										"5"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "add new fileds",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "age",
+											"value": "24",
+											"type": "text"
+										},
+										{
+											"key": "gender",
+											"value": "neutral",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/entity-profile-data-fields/4/fileds",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"entity-profile-data-fields",
+										"4",
+										"fileds"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "profiles data",
+					"item": [
+						{
+							"name": "list profiles data",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/entity-profiles-data/5/data",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"entity-profiles-data",
+										"5",
+										"data"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get specific profile data",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/entity-profiles-data/3/data/2",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"entity-profiles-data",
+										"3",
+										"data",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update profiles data",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "Status",
+											"value": "0",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/entity-profiles-data/3/data/2",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"entity-profiles-data",
+										"3",
+										"data",
+										"2"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "profile data preferences",
+					"item": [
+						{
+							"name": "list preferences",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/entity-profile-data-preferences/3/preferences",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"entity-profile-data-preferences",
+										"3",
+										"preferences"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get specific preference",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/entity-profile-data-preferences/3/preferences/1",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"entity-profile-data-preferences",
+										"3",
+										"preferences",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create preference",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"Category\": \"test\",\r\n    \"Content\": \"lorem ipsum\",\r\n    \"ContentType\": \"text\"\r\n}"
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/entity-profile-data-preferences/3/preferences",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"entity-profile-data-preferences",
+										"3",
+										"preferences"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update preference",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"Id\": \"2\",\n    \"DataId\": \"3\",\n    \"Category\": \"stuff\",\n    \"Content\": {\"lorem\": \"ipsum\", \"dolor\": \"sit amet\"},\n    \"ContentType\": \"serialize\",\n    \"CreationDate\": \"2018-11-28 16:08:26\",\n    \"Status\": 1\n}"
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/entity-profile-data-preferences/3/preferences/2",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"entity-profile-data-preferences",
+										"3",
+										"preferences",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "patch preference",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"Content\": \"lorem ipsum dolor sit amet\",\n    \"ContentType\": \"text\"\n}"
+								},
+								"url": {
+									"raw": "{{domain}}/public/index.php/event-manager/entity-profile-data-preferences/3/preferences/1",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"public",
+										"index.php",
+										"event-manager",
+										"entity-profile-data-preferences",
+										"3",
+										"preferences",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "entity-detail-fields",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "Field",
+									"value": "poster",
+									"type": "text"
+								},
+								{
+									"key": "Multiple",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "Name",
+									"value": "Poster",
+									"type": "text"
+								},
+								{
+									"key": "Pattern",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "Required",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "Status",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "Type",
+									"value": "text",
+									"type": "text"
+								},
+								{
+									"key": "Value",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://192.168.0.15/~johnnyb/microice/events/public/index.php/event-manager/entity-detail-fields/1/fields",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"0",
+								"15"
+							],
+							"path": [
+								"~johnnyb",
+								"microice",
+								"events",
+								"public",
+								"index.php",
+								"event-manager",
+								"entity-detail-fields",
+								"1",
+								"fields"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "entity-types-data-types",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "EntityDataTypeId",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://192.168.0.15/~johnnyb/microice/events/public/index.php/event-manager/entity-types-data-types/2/data-types",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"0",
+								"15"
+							],
+							"path": [
+								"~johnnyb",
+								"microice",
+								"events",
+								"public",
+								"index.php",
+								"event-manager",
+								"entity-types-data-types",
+								"2",
+								"data-types"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "entity-data-types",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "Name",
+									"value": "Tags",
+									"type": "text"
+								},
+								{
+									"key": "Status",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://192.168.0.15/~johnnyb/microice/events/public/index.php/event-manager/entity-data-types",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"0",
+								"15"
+							],
+							"path": [
+								"~johnnyb",
+								"microice",
+								"events",
+								"public",
+								"index.php",
+								"event-manager",
+								"entity-data-types"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "entities",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{domain}}/microice/events/public/index.php/event-manager/entities/2",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"microice",
+								"events",
+								"public",
+								"index.php",
+								"event-manager",
+								"entities",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

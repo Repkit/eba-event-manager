@@ -1,0 +1,365 @@
+<?php
+
+$settings = array(
+    'db'                => array(
+        'driver'            => 'Pdo',
+        'dsn'               => 'mysql:dbname=events;host=localhost',
+        'driver_options'    => array(
+            \PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES \'UTF8\''
+        ),
+        'username'          => '<your_db_username>',
+        'password'          => '<your_db_password>'
+    ),
+    'event' => array(
+        'storage' => array(
+            'joins' => array(
+                'inner' => array(
+                    array(
+                        'table' => 'event_translations',
+                        'on' => "events.Id = event_translations.EventId",
+                        'columns' => array('TranslationId'=>'Id', 'Language', 'Identifier', 'Name')
+                    ),
+                ),
+                'left' => array(array()),
+                'right' => array(array()),
+            ),
+            'where' => array(
+                'external_columns' => array(
+                    'TranslationId' => 'event_translations.Id',
+                    'Language'      => 'event_translations.Language',
+                    'Name'          => 'event_translations.Name',
+                    'Identifier'    => 'event_translations.Identifier',
+                    'Type'          => 'event_type_tranlations.Name',
+                ),
+            ),
+        ),
+    ),
+    'entity' => array(
+        'storage' => array(
+            'joins' => array(
+                'inner' => array(
+                    array(
+                        'table' => 'entity_translations',
+                        'on' => "entities.Id = entity_translations.EntityId",
+                        'columns' => array('TranslationId'=>'Id', 'Language', 'Name')
+                    ),
+                ),
+                'left' => array(array()),
+                'right' => array(array()),
+            ),
+            'where' => array(
+                'external_columns' => array(
+                    'TranslationId' => 'entity_translations.Id',
+                    'Language'      => 'entity_translations.Language',
+                    'Name'          => 'entity_translations.Name',
+                    'Type'          => 'entity_type_translations.Name',
+                ),
+            ),
+        ),
+    ),
+    'event_type' => array(
+        'storage' => array(
+            'joins' => array(
+                'inner' => array(
+                    array(
+                        'table' => 'event_type_translations',
+                        'on' => "event_types.Id = event_type_translations.TypeId",
+                        'columns' => array('TranslationId'=>'Id', 'Language', 'Name')
+                    ),
+                ),
+                'left' => array(array()),
+                'right' => array(array()),
+            ),
+            'where' => array(
+                'external_columns' => array(
+                    'TranslationId' => 'event_type_translations.Id',
+                    'Language'      => 'event_type_translations.Language',
+                    'Name'          => 'event_type_translations.Name',
+                ),
+            ),
+        ),
+    ),
+    'entity_type' => array(
+        'storage' => array(
+            'joins' => array(
+                'inner' => array(
+                    array(
+                        'table' => 'entity_type_translations',
+                        'on' => "entity_types.Id = entity_type_translations.TypeId",
+                        'columns' => array('TranslationId'=>'Id', 'Language', 'Name')
+                    ),
+                ),
+                'left' => array(array()),
+                'right' => array(array()),
+            ),
+            'where' => array(
+                'external_columns' => array(
+                    'TranslationId' => 'entity_type_translations.Id',
+                    'Language'      => 'entity_type_translations.Language',
+                    'Name'          => 'entity_type_translations.Name',
+                ),
+            ),
+        ),
+    ),
+);
+
+return array(
+    'event_manager_settings' => $settings,
+    // integration with dbmanager
+    'DbModels' => array(
+        'MicroIceEventManager\V1\Rest\Events\EventsModel' => array(
+            'tableName' => 'events',
+            'entityClass' => 'MicroIceEventManager\V1\Rest\Events\EventsEntity',
+        ),
+        'MicroIceEventManager\V1\Rest\EventTypes\EventTypesModel' => array(
+            'tableName' => 'event_types',
+            'entityClass' => 'MicroIceEventManager\V1\Rest\EventTypes\EventTypesEntity',
+        ),
+        'MicroIceEventManager\V1\Rest\EventDetailFields\EventDetailFieldsModel' => array(
+            'tableName' => 'event_detail_fields',
+            'entityClass' => 'MicroIceEventManager\V1\Rest\EventDetailFields\EventDetailFieldsEntity',
+        ),
+        'MicroIceEventManager\V1\Rest\EventDetails\EventDetailsModel' => array(
+            'tableName' => 'event_details',
+            'entityClass' => 'MicroIceEventManager\V1\Rest\EventDetails\EventDetailsEntity',
+        ),
+        'MicroIceEventManager\V1\Rest\EventsProfiles\EventsProfilesModel' => array(
+            'tableName' => 'events_profiles',
+            'entityClass' => 'MicroIceEventManager\V1\Rest\EventsProfiles\EventsProfilesEntity',
+        ),
+        'MicroIceEventManager\V1\Rest\EventProfiles\EventProfilesModel' => array(
+            'tableName' => 'event_profiles',
+            'entityClass' => 'MicroIceEventManager\V1\Rest\EventProfiles\EventProfilesEntity',
+        ),
+        'MicroIceEventManager\V1\Rest\EventProfileTranslations\EventProfileTranslationsModel' => array(
+            'tableName' => 'event_profile_translations',
+            'entityClass' => 'MicroIceEventManager\V1\Rest\EventProfileTranslations\EventProfileTranslationsEntity',
+        ),
+        'MicroIceEventManager\V1\Rest\EventProfilePreferences\EventProfilePreferencesModel' => array(
+            'tableName' => 'event_profile_preferences',
+            'entityClass' => 'MicroIceEventManager\V1\Rest\EventProfilePreferences\EventProfilePreferencesEntity',
+        ),
+        'MicroIceEventManager\V1\Rest\EventProfileTypes\EventProfileTypesModel' => array(
+            'tableName' => 'event_profile_types',
+            'entityClass' => 'MicroIceEventManager\V1\Rest\EventProfileTypes\EventProfileTypesEntity',
+        ),
+        'MicroIceEventManager\V1\Rest\EventProfileTypeTranslations\EventProfileTypeTranslationsModel' => array(
+            'tableName' => 'event_profile_type_translations',
+            'entityClass' => 'MicroIceEventManager\V1\Rest\EventProfileTypeTranslations\EventProfileTypeTranslationsEntity',
+        ),
+        'MicroIceEventManager\V1\Rest\EventProfilesTypes\EventProfilesTypesModel' => array(
+            'tableName' => 'event_profiles_types',
+            'entityClass' => 'MicroIceEventManager\V1\Rest\EventProfilesTypes\EventProfilesTypesEntity',
+        ),
+        'MicroIceEventManager\V1\Rest\EventProfileDetails\EventProfileDetailsModel' => array(
+            'tableName' => 'event_profile_details',
+            'entityClass' => 'MicroIceEventManager\V1\Rest\EventProfileDetails\EventProfileDetailsEntity',
+        ),
+        'MicroIceEventManager\V1\Rest\EventProfileDetailFields\EventProfileDetailFieldsModel' => array(
+            'tableName' => 'event_profile_detail_fields',
+            'entityClass' => 'MicroIceEventManager\V1\Rest\EventProfileDetailFields\EventProfileDetailFieldsEntity',
+        ),
+        'MicroIceEventManager\V1\Rest\EventProfilesData\EventProfilesDataModel' => array(
+            'tableName' => 'event_profiles_data',
+            'entityClass' => 'MicroIceEventManager\V1\Rest\EventProfilesData\EventProfilesDataEntity',
+        ),
+        'MicroIceEventManager\V1\Rest\EventProfileData\EventProfileDataModel' => array(
+            'tableName' => 'event_profile_data',
+            'entityClass' => 'MicroIceEventManager\V1\Rest\EventProfileData\EventProfileDataEntity',
+        ),
+        'MicroIceEventManager\V1\Rest\EventProfileDataPreferences\EventProfileDataPreferencesModel' => array(
+            'tableName' => 'event_profile_data_preferences',
+            'entityClass' => 'MicroIceEventManager\V1\Rest\EventProfileDataPreferences\EventProfileDataPreferencesEntity',
+        ),
+        'MicroIceEventManager\V1\Rest\EventProfileDataTypes\EventProfileDataTypesModel' => array(
+            'tableName' => 'event_profile_data_types',
+            'entityClass' => 'MicroIceEventManager\V1\Rest\EventProfileDataTypes\EventProfileDataTypesEntity',
+        ),
+        'MicroIceEventManager\V1\Rest\EventProfileTypesDataTypes\EventProfileTypesDataTypesModel' => array(
+            'tableName' => 'event_profile_types_data_types',
+            'entityClass' => 'MicroIceEventManager\V1\Rest\EventProfileTypesDataTypes\EventProfileTypesDataTypesEntity',
+        ),
+        'MicroIceEventManager\V1\Rest\EventProfileDataFieldConfig\EventProfileDataFieldConfigModel' => array(
+            'tableName' => 'event_profile_data_field_config',
+            'entityClass' => 'MicroIceEventManager\V1\Rest\EventProfileDataFieldConfig\EventProfileDataFieldConfigEntity',
+        ),
+        'MicroIceEventManager\V1\Rest\EventProfileDataFields\EventProfileDataFieldsModel' => array(
+            'tableName' => 'event_profile_data_fields',
+            'entityClass' => 'MicroIceEventManager\V1\Rest\EventProfileDataFields\EventProfileDataFieldsEntity',
+        ),
+        'MicroIceEventManager\V1\Rest\EventData\EventDataModel' => array(
+            'tableName' => 'event_data',
+            'entityClass' => 'MicroIceEventManager\V1\Rest\EventData\EventDataEntity',
+        ),
+        'MicroIceEventManager\V1\Rest\EventDataTypes\EventDataTypesModel' => array(
+            'tableName' => 'event_data_types',
+            'entityClass' => 'MicroIceEventManager\V1\Rest\EventDataTypes\EventDataTypesEntity',
+        ),
+        'MicroIceEventManager\V1\Rest\EventDataFields\EventDataFieldsModel' => array(
+            'tableName' => 'event_data_fields',
+            'entityClass' => 'MicroIceEventManager\V1\Rest\EventDataFields\EventDataFieldsEntity',
+        ),
+        'MicroIceEventManager\V1\Rest\EventDataFieldConfig\EventDataFieldConfigModel' => array(
+            'tableName' => 'event_data_field_config',
+            'entityClass' => 'MicroIceEventManager\V1\Rest\EventDataFieldConfig\EventDataFieldConfigEntity',
+        ),
+        'MicroIceEventManager\V1\Rest\EventsData\EventsDataModel' => array(
+            'tableName' => 'events_data',
+            'entityClass' => 'MicroIceEventManager\V1\Rest\EventsData\EventsDataEntity',
+        ),
+        'MicroIceEventManager\V1\Rest\EventDataPreferences\EventDataPreferencesModel' => array(
+            'tableName' => 'event_data_preferences',
+            'entityClass' => 'MicroIceEventManager\V1\Rest\EventDataPreferences\EventDataPreferencesEntity',
+        ),
+        'MicroIceEventManager\V1\Rest\EventProfileEvents\EventProfileEventsModel' => array(
+            'tableName' => 'event_profile_events',
+            'entityClass' => 'MicroIceEventManager\V1\Rest\EventProfileEvents\EventProfileEventsEntity',
+        ),
+        'MicroIceEventManager\V1\Rest\EventTranslations\EventTranslationsModel' => array(
+            'tableName' => 'event_translations',
+            'entityClass' => 'MicroIceEventManager\V1\Rest\EventTranslations\EventTranslationsEntity',
+        ),
+        'MicroIceEventManager\V1\Rest\EventTypeTranslations\EventTypeTranslationsModel' => array(
+            'tableName' => 'event_type_translations',
+            'entityClass' => 'MicroIceEventManager\V1\Rest\EventTypeTranslations\EventTypeTranslationsEntity',
+        ),
+
+        //entities
+        'MicroIceEventManager\V1\Rest\Entities\EntitiesModel' => array(
+            'tableName' => 'entities',
+            'entityClass' => 'MicroIceEventManager\V1\Rest\Entities\EntitiesEntity',
+        ),
+        'MicroIceEventManager\V1\Rest\EntityTypes\EntityTypesModel' => array(
+            'tableName' => 'entity_types',
+            'entityClass' => 'MicroIceEventManager\V1\Rest\EntityTypes\EntityTypesEntity',
+        ),
+        'MicroIceEventManager\V1\Rest\EntityDetailFields\EntityDetailFieldsModel' => array(
+            'tableName' => 'entity_detail_fields',
+            'entityClass' => 'MicroIceEventManager\V1\Rest\EntityDetailFields\EntityDetailFieldsEntity',
+        ),
+        'MicroIceEventManager\V1\Rest\EntityDetails\EntityDetailsModel' => array(
+            'tableName' => 'entity_details',
+            'entityClass' => 'MicroIceEventManager\V1\Rest\EntityDetails\EntityDetailsEntity',
+        ),
+        'MicroIceEventManager\V1\Rest\EntitiesProfiles\EntitiesProfilesModel' => array(
+            'tableName' => 'entities_profiles',
+            'entityClass' => 'MicroIceEventManager\V1\Rest\EntitiesProfiles\EntitiesProfilesEntity',
+        ),
+        'MicroIceEventManager\V1\Rest\EntityProfiles\EntityProfilesModel' => array(
+            'tableName' => 'entity_profiles',
+            'entityClass' => 'MicroIceEventManager\V1\Rest\EntityProfiles\EntityProfilesEntity',
+        ),
+        'MicroIceEventManager\V1\Rest\EntityProfileTranslations\EntityProfileTranslationsModel' => array(
+            'tableName' => 'entity_profile_translations',
+            'entityClass' => 'MicroIceEventManager\V1\Rest\EntityProfileTranslations\EntityProfileTranslationsEntity',
+        ),
+        'MicroIceEventManager\V1\Rest\EntityProfilePreferences\EntityProfilePreferencesModel' => array(
+            'tableName' => 'entity_profile_preferences',
+            'entityClass' => 'MicroIceEventManager\V1\Rest\EntityProfilePreferences\EntityProfilePreferencesEntity',
+        ),
+        'MicroIceEventManager\V1\Rest\EntityProfileTypes\EntityProfileTypesModel' => array(
+            'tableName' => 'entity_profile_types',
+            'entityClass' => 'MicroIceEventManager\V1\Rest\EntityProfileTypes\EntityProfileTypesEntity',
+        ),
+        'MicroIceEventManager\V1\Rest\EntityProfileTypeTranslations\EntityProfileTypeTranslationsModel' => array(
+            'tableName' => 'entity_profile_type_translations',
+            'entityClass' => 'MicroIceEventManager\V1\Rest\EntityProfileTypeTranslations\EntityProfileTypeTranslationsEntity',
+        ),
+        'MicroIceEventManager\V1\Rest\EntityProfilesTypes\EntityProfilesTypesModel' => array(
+            'tableName' => 'entity_profiles_types',
+            'entityClass' => 'MicroIceEventManager\V1\Rest\EntityProfilesTypes\EntityProfilesTypesEntity',
+        ),
+        'MicroIceEventManager\V1\Rest\EntityProfileDetails\EntityProfileDetailsModel' => array(
+            'tableName' => 'entity_profile_details',
+            'entityClass' => 'MicroIceEventManager\V1\Rest\EntityProfileDetails\EntityProfileDetailsEntity',
+        ),
+        'MicroIceEventManager\V1\Rest\EntityProfileDetailFields\EntityProfileDetailFieldsModel' => array(
+            'tableName' => 'entity_profile_detail_fields',
+            'entityClass' => 'MicroIceEventManager\V1\Rest\EntityProfileDetailFields\EntityProfileDetailFieldsEntity',
+        ),
+        'MicroIceEventManager\V1\Rest\EntityProfilesData\EntityProfilesDataModel' => array(
+            'tableName' => 'entity_profiles_data',
+            'entityClass' => 'MicroIceEventManager\V1\Rest\EntityProfilesData\EntityProfilesDataEntity',
+        ),
+        'MicroIceEventManager\V1\Rest\EntityProfileData\EntityProfileDataModel' => array(
+            'tableName' => 'entity_profile_data',
+            'entityClass' => 'MicroIceEventManager\V1\Rest\EntityProfileData\EntityProfileDataEntity',
+        ),
+        'MicroIceEventManager\V1\Rest\EntityProfileDataPreferences\EntityProfileDataPreferencesModel' => array(
+            'tableName' => 'entity_profile_data_preferences',
+            'entityClass' => 'MicroIceEventManager\V1\Rest\EntityProfileDataPreferences\EntityProfileDataPreferencesEntity',
+        ),
+        'MicroIceEventManager\V1\Rest\EntityProfileDataTypes\EntityProfileDataTypesModel' => array(
+            'tableName' => 'entity_profile_data_types',
+            'entityClass' => 'MicroIceEventManager\V1\Rest\EntityProfileDataTypes\EntityProfileDataTypesEntity',
+        ),
+        'MicroIceEventManager\V1\Rest\EntityProfileTypesDataTypes\EntityProfileTypesDataTypesModel' => array(
+            'tableName' => 'entity_profile_types_data_types',
+            'entityClass' => 'MicroIceEventManager\V1\Rest\EntityProfileTypesDataTypes\EntityProfileTypesDataTypesEntity',
+        ),
+        'MicroIceEventManager\V1\Rest\EntityProfileDataFieldConfig\EntityProfileDataFieldConfigModel' => array(
+            'tableName' => 'entity_profile_data_field_config',
+            'entityClass' => 'MicroIceEventManager\V1\Rest\EntityProfileDataFieldConfig\EntityProfileDataFieldConfigEntity',
+        ),
+        'MicroIceEventManager\V1\Rest\EntityProfileDataFields\EntityProfileDataFieldsModel' => array(
+            'tableName' => 'entity_profile_data_fields',
+            'entityClass' => 'MicroIceEventManager\V1\Rest\EntityProfileDataFields\EntityProfileDataFieldsEntity',
+        ),
+        'MicroIceEventManager\V1\Rest\EntityData\EntityDataModel' => array(
+            'tableName' => 'entity_data',
+            'entityClass' => 'MicroIceEventManager\V1\Rest\EntityData\EntityDataEntity',
+        ),
+        'MicroIceEventManager\V1\Rest\EntityDataTypes\EntityDataTypesModel' => array(
+            'tableName' => 'entity_data_types',
+            'entityClass' => 'MicroIceEventManager\V1\Rest\EntityDataTypes\EntityDataTypesEntity',
+        ),
+        'MicroIceEventManager\V1\Rest\EntityDataFields\EntityDataFieldsModel' => array(
+            'tableName' => 'entity_data_fields',
+            'entityClass' => 'MicroIceEventManager\V1\Rest\EntityDataFields\EntityDataFieldsEntity',
+        ),
+        'MicroIceEventManager\V1\Rest\EntityDataFieldConfig\EntityDataFieldConfigModel' => array(
+            'tableName' => 'entity_data_field_config',
+            'entityClass' => 'MicroIceEventManager\V1\Rest\EntityDataFieldConfig\EntityDataFieldConfigEntity',
+        ),
+        'MicroIceEventManager\V1\Rest\EntitiesData\EntitiesDataModel' => array(
+            'tableName' => 'entities_data',
+            'entityClass' => 'MicroIceEventManager\V1\Rest\EntitiesData\EntitiesDataEntity',
+        ),
+        'MicroIceEventManager\V1\Rest\EntityDataPreferences\EntityDataPreferencesModel' => array(
+            'tableName' => 'entity_data_preferences',
+            'entityClass' => 'MicroIceEventManager\V1\Rest\EntityDataPreferences\EntityDataPreferencesEntity',
+        ),
+        'MicroIceEventManager\V1\Rest\EntityProfileEntities\EntityProfileEntitiesModel' => array(
+            'tableName' => 'entity_profile_events',
+            'entityClass' => 'MicroIceEventManager\V1\Rest\EntityProfileEntities\EntityProfileEntitiesEntity',
+        ),
+        'MicroIceEventManager\V1\Rest\EventsTypes\EventsTypesModel' => array(
+            'tableName' => 'events_types',
+            'entityClass' => 'MicroIceEventManager\V1\Rest\EventsTypes\EventsTypesEntity',
+        ),
+        'MicroIceEventManager\V1\Rest\EventTypesDataTypes\EventTypesDataTypesModel' => array(
+            'tableName' => 'event_types_data_types',
+            'entityClass' => 'MicroIceEventManager\V1\Rest\EventTypesDataTypes\EventTypesDataTypesEntity',
+        ),
+        'MicroIceEventManager\V1\Rest\EntitiesTypes\EntitiesTypesModel' => array(
+            'tableName' => 'entities_types',
+            'entityClass' => 'MicroIceEventManager\V1\Rest\EntitiesTypes\EntitiesTypesEntity',
+        ),
+        'MicroIceEventManager\V1\Rest\EntityTypesDataTypes\EntityTypesDataTypesModel' => array(
+            'tableName' => 'entity_types_data_types',
+            'entityClass' => 'MicroIceEventManager\V1\Rest\EntityTypesDataTypes\EntityTypesDataTypesEntity',
+        ),
+        'MicroIceEventManager\V1\Rest\EventsEntities\EventsEntitiesModel' => array(
+            'tableName' => 'events_entities',
+            'entityClass' => 'MicroIceEventManager\V1\Rest\EventsEntities\EventsEntitiesEntity',
+        ),
+        'MicroIceEventManager\V1\Rest\EntityTranslations\EntityTranslationsModel' => array(
+            'tableName' => 'entity_translations',
+            'entityClass' => 'MicroIceEventManager\V1\Rest\EntityTranslations\EntityTranslationsEntity',
+        ),
+        'MicroIceEventManager\V1\Rest\EntityTypeTranslations\EntityTypeTranslationsModel' => array(
+            'tableName' => 'entity_type_translations',
+            'entityClass' => 'MicroIceEventManager\V1\Rest\EntityTypeTranslations\EntityTypeTranslationsEntity',
+        ),
+    ),
+);
